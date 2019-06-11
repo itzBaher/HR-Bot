@@ -1,17 +1,17 @@
 ﻿const Discord = require("discord.js");
 const client = new Discord.Client();
-const prefix = "$";
+const prefix = "%";
 
 
 
 client.on('ready', () => {
    console.log(`----------------`);
-      console.log(`Desert Bot- Script By : EX Clan`);
+      console.log(`Desert Bot- Script By : itz_baher`);
         console.log(`----------------`);
-      console.log(`ON ${client.guilds.size} Servers '     Script By : EX Clan ' `);
+      console.log(`ON ${client.guilds.size} Servers '     Script By : itz_baher ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`$bc |DF_Team`,"http://twitch.tv/Death Shop")
+client.user.setGame(`$bc |making by itz_baher`,"http://twitch.tv/Death Shop")
 client.user.setStatus("dnd")
 });
 
@@ -24,7 +24,7 @@ client.on("message", async message => {
             var args = message.content.split(" ").slice(1).join(" ");
             if(command == "bc") {
                 if(!message.member.hasPermission("ADMINISTRATOR")) {
-                    return message.channel.send("**للأسف لا تمتلك صلاحية `ADMINISTRATOR`**");
+                    return message.channel.send("**انت لا تملك الصلاحية لفعل هذا`**");
                 }
                     if(!args) {
                         return message.reply("**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**");
@@ -150,13 +150,13 @@ client.on("message", async message => {
             .setThumbnail(message.author.avatarURL)
             .setDescription(`**__برودكاست بوت | Version 1.1__ 
 
-            برودكاست عادي : ${prefix}bc
-            دعوة البوت لسيرفرك : ${prefix}invite
-            معلومات عن السيرفر : ${prefix}server
-            برودكاست للأونلاين فقط : ${prefix}bco
-            يعرض لك عدد المتبندين من سيرفرك : ${prefix}banned
-            رابط سيرفر الدعم الفني : https://discord.gg/k6MvfrC
-            **`);
+            Broadcast all = [prefix] bca [Message]
+            Broadcast Online = [prefix] bcn [Message]
+            Broadcast Ofline = [prefix] bcf [Message]
+            ------------------------------------------
+			= كم عدد الاعضاء المتبندين من السيرفر [prefix] banned
+
+			
             message.channel.sendEmbed(help); // رابط السيرفر يعود الى سيرفر CODES .
     }
 });
